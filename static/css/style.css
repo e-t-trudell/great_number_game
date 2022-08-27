@@ -1,0 +1,52 @@
+*{
+    border-style: border-box;
+    padding: 20px;
+    border: 2px solid blue;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    text-align: center;
+    border: 3px solid green;
+}
+#submit_it{
+    border: 3px solid green;
+    width: 150px;
+    background-color: rgb(35, 242, 138);
+}
+#low {
+    width:200px;
+    height:100px;
+    border: 2px solid black;
+    color: blue;
+    background-color: red;
+    text-align: center;
+    font-size: x-large;
+}
+#high {
+    width:200px;
+    height:100px;
+    border: 2px solid black;
+    color: blue;
+    background-color: red;
+    text-align: center;
+    font-size: x-large;
+}
+#correct{
+    width:200px;
+    height:100px;
+    border: 2px solid black;
+    color: blue;
+    background-color: green;
+    text-align: center;
+    font-size: x-large;
+}
+#playagain{
+    background-color: blueviolet;
+    color: aqua;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}

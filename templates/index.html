@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Hunger Number Games</title>
+</head>
+<body>
+    <h2>Welcome to the Hunger Number Games</h2>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>May the odds be ever in your favor!</p>
+    <!-- display too low or too high or correct-->
+    {%if "answer" in session%}
+        {%if session['start'] == session['answer']%}
+            <div>
+                <p id="correct">{{session['answer']}} is the correct answer!</p>
+                <p><a href="/play_again">The odds were in your favor!</a></p>
+                {# <form action='/play_again'>
+                    <input id="playagain">The odds were in your favor!></input>
+                </form>  #}
+            </div>
+        {%elif session['start'] > session['answer']%}
+            <p id="low">Too low!</p>
+        {%else%}
+            <p id="high">Too High!</p>
+        {%endif%}
+    {%endif%}
+    <form action="/answer" method="post">
+        <input type="text" placeholder="Enter a Number Here" name="answer"></input>
+        <input id='submit_it' type='submit' value="submit" name="submit"></input>
+    </form>
+    
+</body>
+</html>
